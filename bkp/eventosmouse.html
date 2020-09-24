@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<script>
+	//onmousedown = apertar o mouse
+function apertei(){
+	console.log("apertei o mouse!")
+}
+
+//onmouseup = soltar o mouse
+function soltei(){
+	console.log("soltei o mouse!")
+}
+
+//onmouseover = passar em cima
+function passaremcima(){
+	console.log("voce passou em cima do botao!")
+}
+
+//onmouseout = tirar o mouse de cima
+function tirardecima(){
+	console.log("voce tirou o mouse de cima")
+
+}
+
+//movendo = movendo o mouse
+function movendo(){
+	console.log("Voce esta movendo o mouse")
+}
+
+//onclick = clicando no botao
+//online e onmouseup => são a mesma coisa
+function onClick(){
+	console.log("voce clicou no botao")
+}
+
+//botaodireito = clicar bom o botao direito
+function botaodireito(){
+	console.log("voce cliclou com o botao direito do mouse")
+	return false;
+}
+	</script>
+	<meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+</head>
+<body>
+	<button style="width:400px; height:60px;"
+	onmousedown="apertei()"
+	onmouseup="soltei()"
+	onmouseover="passaremcima()"
+	onmouseout="tirardecima()"
+	onmousemove="movendo()"
+	>Seu Pedido!</button>
+
+	<button style="width:400px; height:60px;"
+	onclick="onClick()"
+	oncontextmenu="return botaodireito()"
+	>Pedido 2</button>
+
+
+</body>
+</html>

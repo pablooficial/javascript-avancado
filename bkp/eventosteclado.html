@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+	<script>
+	//onkeydown = aperta o teclado
+function tecladoApertado(event){
+    console.log('Seu teclado esta apertado ' + event.keyCode) 
+    //event.shiftKey = booleano, verdadeiro ou falso
+    //ctrlKey = verdadeiro ou falso
+    if (event.keyCode == 13){
+        console.log('voce pertou o enter')
+    }
+}
+
+function soltarTeclado(event) {
+    console.log('voce soltou o teclado')
+}
+
+function apertarTeclado(event) {
+    console.log('voce apertou o teclado')
+}
+	</script>
+	<meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+</head>
+<body>
+
+	<input type="text" 
+	onkeydown="tecladoApertado(event)"
+	onkeyup="soltarTeclado(event)"
+	onkeypress="apertarTeclado(event)"
+	>
+
+</body>
+</html>
