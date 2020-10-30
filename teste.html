@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+        <meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+    </head>
+<body >
+
+    <form  id="formulario">
+        Digita: <input type="text" id="imputlist"/><br><br><br><br>
+        <button type="button" onclick="criarlist()">Enviar</button>
+        <button type="button" onclick="remover()">Remover</button>
+    </form>
+
+    <ul id="listacompleta">
+
+    </ul>
+
+    <script>
+        //appendChild pega um elemento pai e coloca um elemento filho dentro / cria uma lista
+        function criarlist(){
+            var item = document.getElementById('imputlist').value;
+            var text = document.createTextNode(item);
+            var newItem = document.createElement('li');
+            newItem.appendChild(text);
+            document.getElementById('listacompleta').appendChild(newItem)
+        }
+        function remover(){
+            var list = document.getElementById("listacompleta");
+            list.removeChild(list.childNodes[0]);
+        }
+
+        </script>
+</body>
+</html>

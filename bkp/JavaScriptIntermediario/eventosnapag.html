@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+    <script>
+
+        //onfocus = parece quando coloca o mouse no input
+        function focado(){
+            console.log('O campo esta focado')
+        }
+
+        //onblur = aparece quando tira o mouse do input
+        function desfocado(){
+            console.log('O campo esta desfocado')
+        }
+
+        //onchange = trata um objeto selecionado
+        function opcaoselecionada(objeto){
+            console.log('A cidade que vc selecionou foi: ' + objeto.value)
+            alert(objeto.value)
+        }
+
+        //onsubmit = envia a requisição
+
+	</script>
+	<meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+</head>
+<body>
+
+    <form method="POST" onsubmit="return false">
+            <input type="text" name="nome" onfocus="focado()" onblur="desfocado()">
+            <br/><br/>
+            
+            <select name="cidades" onchange="opcaoselecionada(this)">
+                <option>Sao Paulo</option>
+                <option>Rio de Janeiro</option>
+                <option>Curitiba</option>
+            </select>
+            <br/><br/>
+
+            <input type="submit" value="Enviar">
+
+</body>
+</html>

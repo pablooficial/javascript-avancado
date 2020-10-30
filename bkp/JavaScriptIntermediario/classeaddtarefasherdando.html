@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+     <link href="style.css" rel="stylesheet">
+    <meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+</head>
+<body >
+
+    <button id="novo" >adicionar Tarefa</button>
+
+
+ <script>
+     class List{
+        constructor(){
+            this.data = [];
+        }
+        add(data){
+            this.data.push(data);
+            console.log(this.data);
+        }
+
+     }
+
+
+    class ListaTarefas extends List{ 
+        constructor(){
+            super();
+            this.nome = "mateus";
+        }
+        mostrarnome(){
+            console.log(this.nome);
+        }
+
+   
+    }
+    
+    const minhasTarefas = new ListaTarefas(); //É preciso instanciar a classe ListaTarefas
+
+    document.getElementById('novo').onclick = function(){
+    minhasTarefas.add("pablo waniery"); //chamando o metodo minhasTarefas
+    }
+
+    minhasTarefas.mostrarnome();
+    
+    </script>
+</body>
+</html>

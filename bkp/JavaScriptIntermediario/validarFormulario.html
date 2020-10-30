@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+    <script>
+    function validar(){
+        //crio uma variavel e pego atruo o id do formalario
+        var valor = document.getElementById("numero").value;
+        var nomeValor = document.getElementById("nome").value;
+
+        //pelo a variavel valor vejo se a qtd de elementos "length" e maior que 2.
+        if (valor.length > 2){
+            alert("Você apenas pode digitar 2 números");
+            document.formulario.numero.focus();
+            //se for > retorno false, n envia
+            return false;
+        }
+        //se nao aquilo, isso
+        else if(nomeValor.length <3){
+            alert("Digite um nome maior!");
+            return false;
+        }
+        else{
+            alert("Formulario enviado!");
+            return true;
+        }
+    }
+    </script>
+    <link href="style.css" rel="stylesheet">
+	<meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+</head>
+<body >
+    <form method="POST" name="formulario" onsubmit="return validar()">
+        Digite 2 números: <input type="text" name="numero" id="numero"/><br><br>
+        Digite seu nome: <input type="text" name="nome" id="nome"/><br><br>
+
+        <input type="submit" value="Enviar">
+    </form>
+   
+
+ 
+
+</body>
+</html>

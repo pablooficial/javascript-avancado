@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript</title>
+    <script>
+            /*
+        Abaixo de 17 Muito abaixo do peso
+        Entre 17 e 18,49 Abaixo do peso
+        Entre 18,50 e 24,99 Peso normal
+        Entre 25 e 29,99 Acima do peso
+        */
+
+
+        var peso;
+        var altura;
+        var imc;
+        var resultado;
+
+        function calcular(){
+            peso = document.getElementById('peso').value;
+            altura = document.getElementById('altura').value;
+            imc = peso/(altura*altura);
+            console.log(imc)
+
+            if(imc < 17){
+                resultado = document.getElementById('resultado');
+                /*toFixed = passo quantas casas quero trazer*/
+                resultado.innerHTML = '<br>Seu resultado foi: ' + imc.toFixed(2) + '<br> <h3>CUIDADO: Está muito abaixo do peso</h3>'; 
+                document.getElementById('peso').value = '';
+                document.getElementById('altura').value = '';
+                return false;
+            } else if(imc >17 && imc < 18.49){
+                resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Seu resultado foi: ' + imc.toFixed(2) +'<br><h3>Abaixo do peso </h3>';
+                document.getElementById('peso').value = '';
+                document.getElementById('altura').value = '';
+                return false;
+            } else if(imc > 18.49 && imc < 24.99){
+                resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Seu resultado foi: ' + imc.toFixed(2) + '<br><h3>Peso normal</h3>'
+                document.getElementById('peso').value = '';
+                document.getElementById('altura').value = '';
+                return false;
+            } else if(imc > 24.99 && imc < 29.99){
+                resultado = document.getElementById('resultado');
+                resultado.innerHTML = '<br>Seu resultado foi: ' + imc.toFixed(2) + '<br><h3>Acima do peso</h3>'
+                document.getElementById('peso').value = '';
+                document.getElementById('altura').value = '';
+                return false;
+            }else{
+                return false;
+            }
+        }
+    </script>
+    <link href="style.css" rel="stylesheet">
+	<meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+</head>
+<body >
+
+    <form method="POST" onsubmit="return calcular()">
+        Digite seu peso: 
+        <input type="text" name="peso" id="peso"/><br><br>
+        Digite sua altura:
+        <input type="text" name="altura" id="altura"><br><br>
+
+        <input type="submit" value="Calcular IMC">
+
+    </form>
+
+    <div id="resultado"></div>
+
+ 
+
+</body>
+</html>

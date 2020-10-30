@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript</title>
+
+
+        <meta http-equiv=”Content-Type” content=”text/html; charset=iso-8859-1″>
+    </head>
+<body >
+
+    <form  id="formulario">
+        Digita: <input type="text" name="numero" id="numero"/><br><br>
+        <br><br>
+
+        <button type="button" onclick="validar()">Enviar</button>
+    </form>
+
+    <div id="area">
+		....
+	</div>
+
+    <script>
+        function validar(){
+         var area = document.getElementById('area');   
+         var numero = document.getElementById('numero').value;          
+         area.innerHTML = 'Bem vindo... ' + numero  ;
+         console.log('teste')
+        }
+
+        </script>
+</body>
+</html>
